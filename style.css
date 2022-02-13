@@ -1,0 +1,140 @@
+section {
+  padding-top: 5rem;
+}
+
+.mybutton {
+  transition: 0.25s;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 15px;
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.mybutton::after {
+  background-color: rgb(231, 80, 0);
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  transform: translate(5px, 5px);
+  z-index: -1;
+  transition: 0.25s;
+}
+.mybutton:hover:after {
+  transform: translate(0px, 0px);
+}
+
+.cardA {
+  position: relative;
+  width: 350px;
+  height: 479px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.cardA::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(230, 230, 230);
+  border-radius: 15px;
+  z-index: -2;
+  transform: translate(7px, 7px);
+}
+.lineA {
+  position: relative;
+  margin: 0 1rem;
+  width: 315px;
+  height: 2px;
+  background: black;
+  border-radius: 15px;
+}
+
+.cardB {
+  position: relative;
+  margin-right: 0;
+  width: 350px;
+  height: 617px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.cardB::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #ffcb1f;
+  border-radius: 15px;
+  z-index: -1;
+  transform: translate(7px, 7px);
+}
+
+.btnA {
+  padding: 0.6rem;
+  transition: 0.25s;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  position: absolute;
+  width: 310px;
+  height: 50px;
+  margin: 1rem 1rem;
+}
+.btnA::after {
+  background-color: white;
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  transform: translate(7px, 7px);
+  z-index: -1;
+  transition: 0.25s;
+}
+
+.btnA:hover:after {
+  transform: translate(0px, 0px);
+}
+
+.client .imgBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.client .imgBx img {
+  max-width: 200px;
+  margin: 20px;
+  filter: invert(0.75);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.client .imgBx img:hover {
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 991px) {
+  #features {
+    margin: 0 1rem;
+    padding-left: 1rem;
+  }
+  .cardA {
+    max-width: 100%;
+    max-height: 92%;
+  }
+  .cardB {
+    max-width: 100%;
+    max-height: 93%;
+  }
+  .lineA {
+    margin: 0 1rem;
+    max-width: 87%;
+  }
+  .btnA {
+    max-width: 87%;
+  }
+  footer {
+    padding-left: 1rem;
+  }
+}
